@@ -41,7 +41,7 @@ switch_light: ☀️
 switch_dark: 🌙
 
 # favicon
-favicon: /images/favicon.png
+favicon: /images/favicon.ico
 # thumbnail
 thumbnail: /images/thumbnail.png
 
