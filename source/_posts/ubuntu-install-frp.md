@@ -1,7 +1,11 @@
 ---
 title: Ubuntu 开机启动 frp 内网穿透
 date: 2024-02-02 00:16:23
+categories:
+- ubuntu
+- frp
 tags:
+- frpc
 ---
 ## 创建文件
 

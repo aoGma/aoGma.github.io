@@ -1,0 +1,22 @@
+widgets:
+  - type: profile
+    position: left
+    # Author name
+    author: ao
+    # Title of the author
+    author_title: front-end engineer
+    # Author location/organization
+    location: China
+    # URL of the avatar/profile picture
+    avatar: /img/avatar.png
+    # Whether to show a round clip of the avatar
+    avatar_rounded: false
+    # The email address of the Gravatar service(if the `avatar` is not set)
+    gravatar:
+    # The follow link URL
+    follow_link: "https://github.com/aoGmg"
+    # Social media link URLs
+  - type: tags
+    position: left
+  - type: categories
+    position: left

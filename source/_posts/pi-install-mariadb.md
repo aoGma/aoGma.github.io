@@ -1,7 +1,10 @@
 ---
 title: 树莓派安装 mariadb
 date: 2024-02-02 00:04:39
+categories:
+- raspberry-pi
 tags:
+- mariadb
 ---
 ## 安装
 

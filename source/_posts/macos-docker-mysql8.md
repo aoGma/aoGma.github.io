@@ -1,7 +1,11 @@
 ---
 title: macOS Docker安装MySQL8
 date: 2024-02-01 23:33:06
+categories:
+- macos
+- docker
 tags:
+- mysql
 ---
 ### 版本号
 

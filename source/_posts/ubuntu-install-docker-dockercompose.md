@@ -1,6 +1,9 @@
 ---
 title: Ubuntu 安装 Docker 和 docker-compose
 date: 2024-02-02 00:15:22
+categories:
+- ubuntu
+- docker
 tags:
 ---
 ## 软件版本

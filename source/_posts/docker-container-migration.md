@@ -1,6 +1,10 @@
 ---
 title: Docker 已创建容器挂载目录迁移
 date: 2023-10-21 21:27:30
+categories:
+- docker
+tag:
+- migration
 ---
 ## 停止容器
 

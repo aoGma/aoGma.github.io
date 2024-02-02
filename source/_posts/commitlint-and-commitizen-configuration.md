@@ -1,7 +1,12 @@
 ---
 title: Commitlint 和 Commitizen 规范项目提交信息
 date: 2024-02-01 23:57:09
+categories:
+- front-end
 tags:
+- commitlint
+- commitizen
+- husky
 ---
 ## 1.配置husky
 >

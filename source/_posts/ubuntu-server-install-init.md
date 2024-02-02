@@ -40,7 +40,7 @@ sudo apt purge needrestart -y
 
 ## 使用全部磁盘空间
 
-![磁盘没有全部使用](https://lsky.ao.abc/i/2023/11/21/655c63e9bcb76.png)
+![磁盘没有全部使用](655c63e9bcb76.png)
 
 ```shell
 # 查看现有的卷组

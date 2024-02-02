@@ -1,7 +1,10 @@
 ---
 title: 树莓派安装 LskyPro
 date: 2024-02-02 00:04:01
+categories:
+- raspberry-pi
 tags:
+- lskypro
 ---
 ## 安装php8.2
 

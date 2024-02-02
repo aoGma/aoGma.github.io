@@ -1,7 +1,10 @@
 ---
 title: Ubuntu 启动 CloudFlare 端口模式
 date: 2024-02-02 00:09:46
+categories:
+- ubuntu
 tags:
+- cloudflare
 ---
 ![655df1d56c1df](655df1d56c1df.png)
 
