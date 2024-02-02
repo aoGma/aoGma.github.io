@@ -8,7 +8,7 @@ widgets:
     # Author location/organization
     location: China
     # URL of the avatar/profile picture
-    avatar: /img/avatar.png
+    avatar: /img/avatar-ts.png
     # Whether to show a round clip of the avatar
     avatar_rounded: false
     # The email address of the Gravatar service(if the `avatar` is not set)
