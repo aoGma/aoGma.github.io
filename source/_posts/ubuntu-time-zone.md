@@ -17,11 +17,22 @@ sudo timedatectl
 ```
 
 下面的输出显示系统时区被设置为"UTC":
+<div class="justified-gallery">
+
 ![655dee1461a02](655dee1461a02.png)
+
+</div>
 系统时区通过链接文件/etc/localtime配置，该链接指向/usr/share/zoneinfo目录下的一个二进制时区标识文件。另外一个检查时区的方法就是显示这个链接文件指向的实际路径，使用ls命令：
+<div class="justified-gallery">
+
 ![655dee6edb536](655dee6edb536.png)
+
+</div>
 系统的时区同时也被写入/etc/timezone文件：
+<div class="justified-gallery">
+
 ![655dee9f3d7df](655dee9f3d7df.png)
+</div>
 
 ## 使用timedatectl命令修改时区
 
@@ -31,4 +42,8 @@ sudo timedatectl list-timezones
 sudo timedatectl set-timezone
 ```
 
+<div class="justified-gallery">
+
 ![655def839b174](655def839b174.png)
+
+</div>

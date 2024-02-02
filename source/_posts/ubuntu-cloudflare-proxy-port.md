@@ -6,7 +6,11 @@ categories:
 tags:
 - cloudflare
 ---
+<div class="justified-gallery">
+
 ![655df1d56c1df](655df1d56c1df.png)
+
+</div>
 
 ```shell
 warp-cli set-mode proxy
@@ -19,7 +23,11 @@ chmod u+x ./warp-yxip.sh
 warp-cli set-custom-endpoint 162.159.195.98:3476
 ```
 
+<div class="justified-gallery">
+
 ![655e19260504a](655e19260504a.png)
+
+</div>
 
 ## 附件
 

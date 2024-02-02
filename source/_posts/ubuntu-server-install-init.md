@@ -40,7 +40,11 @@ sudo apt purge needrestart -y
 
 ## 使用全部磁盘空间
 
+<div class="justified-gallery">
+
 ![磁盘没有全部使用](655c63e9bcb76.png)
+
+</div>
 
 ```shell
 # 查看现有的卷组

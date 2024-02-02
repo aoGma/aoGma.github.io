@@ -78,3 +78,29 @@ comment:
 plugins:
   bing_webmaster:
     tracking_id: FA0DD8FC4D76C8D0698C0DC0A2E39C26
+  gallery: true
+  cookie_consent:
+    # 同意对话框类型。可以为"info"，"opt-in"，或"opt-out"
+    type: info
+    # 弹出框主题。可以为"block"，"edgeless"，或"classic"
+    theme: edgeless
+    # 是否使弹出框固定，不随页面滚动而滚动
+    static: false
+    # 弹出框在屏幕上的位置
+    position: bottom-left
+    # 你网站的Cookie协议的URL
+    policyLink: "https://www.cookiesandyou.com/"
+  outdated_browser: true
+  animejs: true
+  progressbar: true
+donates:
+  - type: alipay
+    # 个人赞助页面的地址
+    qrcode: /img/alipay-receive.jpg
+  - type: wechat
+    qrcode: /img/wechat-receive.jpg
+search:
+  type: insight
+  include_pages: true # 可选项。设置为false时从搜索结果中排除所有page
+share:
+  type: addtoany
