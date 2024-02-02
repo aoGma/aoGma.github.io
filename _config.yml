@@ -1,10 +1,10 @@
 title: ao's blog
 subtitle: ""
-description: "stay hungry stay foolish"
+description: stay hungry stay foolish
 keywords: blog
 author: ao
-timezone: "Asia/Shanghai"
-url: https://aogmg.github.io
+timezone: Asia/Shanghai
+url: http://localhost:4000
 permalink: ":year/:month/:day/:title/"
 permalink_defaults: null
 pretty_urls:
@@ -61,7 +61,6 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-# language: zh-CN
 language: en
 theme: icarus
 deploy:
