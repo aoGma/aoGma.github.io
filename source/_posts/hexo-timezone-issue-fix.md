@@ -13,9 +13,7 @@ tags:
 
 ## .github/workflows/main.yml
 
-增加配置
-
-```yml
+```yml 增加配置
 - name: Set Timezone
   run: |
     sudo timedatectl set-timezone Asia/Shanghai
