@@ -1,9 +1,9 @@
-title: Hexo
+title: ao's blog
 subtitle: ""
-description: ""
-keywords: null
-author: John Doe
-timezone: ""
+description: "stay hungry stay foolish"
+keywords: blog
+author: ao
+timezone: "Asia/Shanghai"
 url: https://aogmg.github.io
 permalink: ":year/:month/:day/:title/"
 permalink_defaults: null
