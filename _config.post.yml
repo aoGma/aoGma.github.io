@@ -19,4 +19,9 @@ widgets:
   - type: tags
     position: left
   - type: categories
-    position: left
+    position: right
+sidebar:
+  left:
+    sticky: true
+  right:
+    sticky: true

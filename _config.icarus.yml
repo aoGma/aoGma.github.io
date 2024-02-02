@@ -31,9 +31,9 @@ article:
     "CC BY-NC-SA 4.0": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 sidebar:
   left:
-    sticky: true
+    sticky: false
   right:
-    sticky: true
+    sticky: false
 widgets:
   - type: profile
     position: left
@@ -87,7 +87,7 @@ plugins:
     # 是否使弹出框固定，不随页面滚动而滚动
     static: false
     # 弹出框在屏幕上的位置
-    position: bottom-left
+    position: bottom-right
     # 你网站的Cookie协议的URL
     policyLink: "https://www.cookiesandyou.com/"
   outdated_browser: true
