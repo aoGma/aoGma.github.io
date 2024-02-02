@@ -62,6 +62,6 @@ include: null
 exclude: null
 ignore: null
 language: en
-theme: icarus
+theme: icarusao
 deploy:
   type: ""
