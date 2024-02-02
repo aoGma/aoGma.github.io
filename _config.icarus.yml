@@ -75,3 +75,6 @@ comment:
   enable_hotkey: true # 可选填
   language: en # 可选填
   # language: zh-CN # 可选填
+plugins:
+  bing_webmaster:
+    tracking_id: FA0DD8FC4D76C8D0698C0DC0A2E39C26
