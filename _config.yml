@@ -4,7 +4,7 @@ description: stay hungry stay foolish
 keywords: blog
 author: ao
 timezone: Asia/Shanghai
-url: https://aogmg.github.io
+url: http://localhost:4000
 permalink: ":year/:month/:day/:title/"
 permalink_defaults: null
 pretty_urls:
