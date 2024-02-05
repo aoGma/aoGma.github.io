@@ -2,9 +2,8 @@
 title: JavaScript 判断元素滚动到底部
 date: 2024-02-02 00:00:12
 categories:
-- javascript
+- front-end
 tags:
-- dom
 ---
 ## DOM元素的三个属性
 

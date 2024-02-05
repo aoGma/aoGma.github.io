@@ -4,7 +4,6 @@ date: 2024-02-02 00:06:47
 categories:
 - ubuntu
 tags:
-- terminal
 ---
 cp和mv是GNU coreutils的一部分，首先下载最新的GNU源码。
 [地址](https://ftp.gnu.org/gnu/coreutils/)

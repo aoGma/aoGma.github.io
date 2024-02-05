@@ -1,6 +1,8 @@
 ---
 title: UbuntuServer 安装初始化设置
 date: 2024-02-02 00:07:33
+categories:
+- ubuntu
 tags:
 ---
 ## 安装CloudFlare

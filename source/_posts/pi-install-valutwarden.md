@@ -2,9 +2,8 @@
 title: 树莓派安装 valutwarden
 date: 2024-02-02 00:05:45
 categories:
-- raspberry-pi
+- pi
 tags:
-- valutwarden
 ---
 ## 创建目录
 

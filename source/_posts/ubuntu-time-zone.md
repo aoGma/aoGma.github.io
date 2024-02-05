@@ -4,7 +4,6 @@ date: 2024-02-02 00:17:18
 categories:
 - ubuntu
 tags:
-- timezone
 ---
 ## 查看时区
 

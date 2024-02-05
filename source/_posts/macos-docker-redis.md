@@ -2,10 +2,8 @@
 title: macOS Docker 持久化安装 Redis
 date: 2024-02-01 23:55:13
 categories:
-- macos
 - docker
 tags:
-- redis
 ---
 ## 安装步骤
 

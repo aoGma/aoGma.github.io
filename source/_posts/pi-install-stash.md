@@ -2,9 +2,8 @@
 title: 树莓派安装 Stash
 date: 2024-02-02 00:05:16
 categories:
-- raspberry-pi
+- pi
 tags:
-- stash
 ---
 ## 安装
 

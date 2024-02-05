@@ -4,9 +4,7 @@ date: 2024-02-01 23:57:09
 categories:
 - front-end
 tags:
-- commitlint
-- commitizen
-- husky
+- git
 ---
 ## 1.配置husky
 >

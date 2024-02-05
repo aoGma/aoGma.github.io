@@ -4,8 +4,6 @@ date: 2024-02-02 00:01:43
 categories:
 - linux
 tags:
-- soft-link
-- hard-link
 ---
 ## 软链接（Soft links）
 
