@@ -31,9 +31,9 @@ article:
     "CC BY-NC-SA 4.0": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 sidebar:
   left:
-    sticky: false
+    sticky: true
   right:
-    sticky: false
+    sticky: true
 widgets:
   - type: profile
     position: left
@@ -57,7 +57,7 @@ widgets:
   - type: tags
     position: left
   - type: categories
-    position: left
+    position: right
 comment:
   type: gitalk
   client_id: a86575089310f19071f7
