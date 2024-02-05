@@ -16,9 +16,9 @@ widgets:
     # The follow link URL
     follow_link: "https://github.com/aoGmg"
     # Social media link URLs
-  - type: tags
-    position: left
   - type: categories
+    position: left
+  - type: tags
     position: right
 sidebar:
   left:

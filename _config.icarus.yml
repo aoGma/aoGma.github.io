@@ -53,9 +53,9 @@ widgets:
     # Social media link URLs
   - type: recent_posts
     position: right
-  - type: tags
-    position: left
   - type: categories
+    position: left
+  - type: tags
     position: right
 # comment:
 #   type: gitalk
