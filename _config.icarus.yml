@@ -15,7 +15,6 @@ navbar:
     About: /about
 article:
   highlight:
-    # 代码高亮主题
     # https://github.com/highlightjs/highlight.js/tree/master/src/styles
     theme: atom-one-light
     # 显示复制代码按钮
