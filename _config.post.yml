@@ -14,7 +14,7 @@ widgets:
     # The email address of the Gravatar service(if the `avatar` is not set)
     gravatar:
     # The follow link URL
-    follow_link: "https://github.com/aoGmg"
+    follow_link: "https://github.com/aoGma"
     # Social media link URLs
   - type: categories
     position: left
