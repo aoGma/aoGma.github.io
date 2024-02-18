@@ -83,11 +83,11 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 # 设置淘宝源
 vim ~/.zshrc
 
-export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 
 vim ~/.npmrc
 
-registry=https://registry.npm.taobao.org
+registry=http://registry.npm.taobao.org
 
 # npm 安装全局插件
 npm i -g prettier eslint stylelint pnpm yarn
