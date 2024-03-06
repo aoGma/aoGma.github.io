@@ -38,3 +38,10 @@ mkcert -install
 
 mkcert ao.pi "*.ao.pi" localhost 127.0.0.1 ::1
 ```
+
+### 主机信任证书
+
+```bash
+mkcert -CAROOT
+# 将 rootCA.pem 下载到主机上，信任即可
+```
