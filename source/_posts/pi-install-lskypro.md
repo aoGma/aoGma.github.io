@@ -48,7 +48,7 @@ sudo apt install -y php8.1-fpm php8.1-common php8.1-cli php8.1-curl php8.1-gd ph
 1.修改php.ini
 
 ```bash
-vim /etc/php/8.2/fpm/php.ini
+vim /etc/php/8.1/fpm/php.ini
 ```
 
 - 找到disable_functions，若 “=” 右侧存在exec、shell_exec、readlink、symlink、putenv、getenv函数，将其删除（默认状态下，等号右侧为空白）；
@@ -60,7 +60,7 @@ vim /etc/php/8.2/fpm/php.ini
 2.重启服务
 
 ```bash
-sudo systemctl restart php8.2-fpm && sudo systemctl status php8.2-fpm
+sudo systemctl restart php8.1-fpm && sudo systemctl status php8.1-fpm
 ```
 
 ## 创建数据库
@@ -69,12 +69,51 @@ sudo systemctl restart php8.2-fpm && sudo systemctl status php8.2-fpm
 # 创建wiki数据库
 CREATE DATABASE IF NOT EXISTS lsky DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 # 新建用户
-create user 'lskypro'@'localhost' identified by 'Ywc1989@@';
+create user 'lskypro'@'localhost' identified by '--password--';
 # 赋予权限
 GRANT ALL PRIVILEGES ON lsky.* TO 'lskypro'@'localhost';
 # 刷新权限
 flush privileges;
 exit;
+```
+
+## 配置 Nginx 反向代理
+
+```bash
+server {
+ listen 443 ssl;
+ listen [::]:443 ssl;
+
+ root /var/www/lsky/public;
+ index index.php index.html index.htm index.nginx-debian.html;
+ server_name lsky.ao.pi;
+
+ location / {
+  try_files $uri $uri/ /index.php?$query_string;
+ }
+ location ~ \.php$ {
+  include snippets/fastcgi-php.conf;
+  fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+ }
+}
+
+# 将请求转成https
+server {
+ listen 80;
+ server_name lsky.ao.pi;
+ rewrite ^(.*)$ https://$host$1 permanent;
+}
+```
+
+## 下载 code 文件
+
+```bash
+cd /var/www
+sudo mkdir lsky && cd lsky
+sudo wget https://github.com/lsky-org/lsky-pro/releases/download/2.1/lsky-pro-2.1.zip
+sudo unzip lsky-pro-2.1.zip && sudo rm -rf lsky-pro-2.1.zip
+sudo chown -R www-data:www-data /var/www/lsky
+sudo chmod -R 755 /var/www/lsky
 ```
 
 ## 卸载PHP
