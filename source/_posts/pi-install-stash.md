@@ -42,6 +42,37 @@ WorkingDirectory=/etc/stash
 WantedBy=multi-user.target
 ```
 
+## 配置 Nginx
+
+```conf
+server {
+    listen 443;
+    listen [::]:443;
+
+    server_name stash.ao.pi;
+    client_max_body_size 0;
+
+    #ssl证书的pem文件路径
+    ssl_certificate  ao.pi.pem;
+    #ssl证书的key文件路径
+    ssl_certificate_key ao.pi-key.pem;
+
+    location / {
+        proxy_pass http://localhost:9999;
+
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Port $server_port;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+```
+
 ## 启动
 
 ```bash
