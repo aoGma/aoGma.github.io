@@ -1,5 +1,3 @@
-favicon: img/favicon.ico
-avatar: img/avatar-ts.png
 inject:
   head:
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" />
