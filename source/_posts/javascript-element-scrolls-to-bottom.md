@@ -11,11 +11,7 @@ tags:
 - clientHeight: 元素的像素高度，包括盒子内容content和内边距padding, 不包括边框外边距和水平滚动条（只读）
 - scrollHeight: 类似于clientHeight，但包括由于overflow属性不可见内容的高度。
 
-<div class="justified-gallery">
-
 ![ScrollHeight](65581379c3845.png)
-
-</div>
 
 ## 计算公式
 

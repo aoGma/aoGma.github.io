@@ -38,11 +38,7 @@ docker stop 「容器ID」
 docker remove 「容器ID」
 ```
 
-<div class="justified-gallery">
-
 ![655633ee86ff7](655633ee86ff7.png)
-
-</div>
 
 ### 启动mysql容器
 
@@ -50,11 +46,7 @@ docker remove 「容器ID」
 docker run --name mysql -v /Users/ao/Desktop/docker/mysql/my.cnf:/etc/my.cnf -v /Users/ao/Desktop/docker/mysql/data:/var/lib/mysql -p 3308:3306 -e MYSQL_ROOT_PASSWORD=Ywc1989@@ -d mysql/mysql-server
 ```
 
-<div class="justified-gallery">
-
 ![6556341408363](6556341408363.png)
-
-</div>
 
 ### Root用户允许远程登录
 
@@ -74,11 +66,7 @@ RENAME USER 'root'@'localhost' TO 'root'@'%';
 FLUSH PRIVILEGES;
 ```
 
-<div class="justified-gallery">
-
 ![6556405f81268](6556405f81268.png)
-
-</div>
 
 ### 参考文章
 
