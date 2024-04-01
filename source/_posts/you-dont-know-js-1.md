@@ -44,3 +44,164 @@ tags:
 > 当函数可以记住并访问所在的词法作用域，即使函数是在当前词法作用域之外执行，这时就产生了闭包。
 
 ### 6.This
+
+之前我们说过this是在运行时进行绑定的，并不是在编写时绑定，它的上下文取决于函数调用时的各种条件。this的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。当一个函数被调用时，会创建一个活动记录（有时候也称为执行上下文）。这个记录会包含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息。this就是记录的其中一个属性，会在函数执行的过程中用到。
+
+学习this的第一步是明白this既不指向函数自身也不指向函数的词法作用域，你也许被这样的解释误导过，但其实它们都是错误的。this实际上是在函数被调用时发生的绑定，它指向什么完全取决于函数在哪里被调用。
+
+### 7.This全面解析
+
+#### 绑定规则
+
+1. 默认绑定
+
+    ```javascript
+    function foo() {
+      console.log(this.a)
+    }
+
+    var a = 2;
+    foo()
+    ```
+
+    在代码中，foo()是直接使用不带任何修饰的函数引用进行调用的，因此只能使用默认绑定，无法应用其他规则。如果使用严格模式（strict mode），那么全局对象将无法使用默认绑定，因此this会绑定undefined。
+
+1. 隐式绑定
+
+    ```javascript
+    function foo() {
+      console.log( this.a );
+    }
+    var obj = {
+      a: 2,
+      foo: foo
+    };
+    obj.foo(); // 2
+    ```
+
+    对象属性引用链中只有最顶层或者说最后一层会影响调用位置。
+    **隐式丢失**
+    一个最常见的this绑定问题就是被隐式绑定的函数会丢失绑定对象，也就是说它会应用默认绑定，从而把this绑定到全局对象或者undefined上，取决于是否是严格模式。
+
+1. 显式绑定
+    硬绑定
+    > call、apply、bind方法
+    API调用的“上下文”
+
+    ```javascript
+    function foo(el) {
+      console.log( el, this.id );
+    }
+    var obj = {
+      id: "awesome"
+    };
+    // 调用foo(..)时把this绑定到obj
+    [1, 2, 3].forEach( foo, obj );
+    // 1 awesome 2 awesome 3 awesome
+    ```
+
+1. new绑定
+
+    使用new 来调用函数，或者说发生构造函数调用时，会自动执行下面的操作。
+
+    - 创建（或者说构造）一个全新的对象。
+    - 这个新对象会被执行[[ 原型]] 连接。
+    - 这个新对象会绑定到函数调用的this。
+    - 如果函数没有返回其他对象，那么new 表达式中的函数调用会自动返回这个新对象。
+
+#### 优先级
+
+默认绑定 < 隐式绑定 < 显示绑定 < new绑定
+
+#### 判断规则
+
+如果要判断一个运行中函数的this绑定，就需要找到这个函数的直接调用位置。找到之后就可以顺序应用下面这四条规则来判断this 的绑定对象。
+
+1. 由new调用？绑定到新创建的对象。
+1. 由call或者apply（或者bind）调用？绑定到指定的对象。
+1. 由上下文对象调用？绑定到那个上下文对象。
+
+一定要注意，有些调用可能在无意中使用默认绑定规则。如果想“更安全”地忽略this绑定，你可以使用一个DMZ对象，比如 ø = Object.create(null)，以保护全局对象。
+ES6中的箭头函数并不会使用四条标准的绑定规则，而是根据当前的词法作用域来决定this，具体来说，箭头函数会继承外层函数调用的this绑定（无论this绑定到什么）。这其实和ES6之前代码中的self = this机制一样。
+
+### 8.对象
+
+String
+Number
+Undefined
+Null
+Function
+Object
+Symbol
+
+#### 不变性
+
+1. 对象常量
+      结合writable:false和configurable:false就可以创建一个真正的常量属性（不可修改、重定义或者删除）
+1. 禁止扩展
+      Object.preventExtensions(..)
+1. 密封
+      Object.seal(..)会创建一个“密封”的对象，这个方法实际上会在一个现有对象上调用Object.preventExtensions(..)并把所有现有属性标记为configurable:false。所以，密封之后不仅不能添加新属性，也不能重新配置或者删除任何现有属性（虽然可以修改属性的值） 。
+1. 冻结
+      Object.freeze(..)会创建一个冻结对象，这个方法实际上会在一个现有对象上调用Object.seal(..)并把所有“数据访问”属性标记为writable:false，这样就无法修改它们的值。这个方法是你可以应用在对象上的级别最高的不可变性，它会禁止对于对象本身及其任意直接属性的修改（不过就像我们之前说过的，这个对象引用的其他对象是不受影响的）。你可以“深度冻结”一个对象，具体方法为，首先在这个对象上调用Object.freeze(..)，然后遍历它引用的所有对象并在这些对象上调用Object.freeze(..)。但是一定要小心，因为这样做有可能会在无意中冻结其他（共享）对象。
+
+### 9. 混合对象“类”
+
+#### 寄生继承
+
+```javascript
+// “传统的JavaScript类”Vehicle
+function Vehicle() {
+  this.engines = 1;
+}
+Vehicle.prototype.ignition = function() {
+  console.log( "Turning on my engine.");
+};
+Vehicle.prototype.drive = function() {
+  this.ignition();
+  console.log( "Steering and moving forward!" );
+};
+// “寄生类” Car
+function Car() {
+  // 首先，car是一个Vehicle
+  var car = new Vehicle();
+  // 接着我们对car进行定制
+  car.wheels = 4;
+  // 保存到Vehicle::drive()的特殊引用
+  var vehDrive = car.drive;
+  // 重写Vehicle::drive()
+  car.drive = function() {
+    vehDrive.call( this );
+    console.log("Rolling on all " + this.wheels + " wheels!");
+  }
+  return car;
+}
+var myCar = new Car();
+```
+
+#### 隐式混入
+
+```javascript
+var Something = {
+  cool: function() {
+    this.greeting = "Hello World";
+    this.count = this.count ? this.count + 1 : 1;
+  }
+};
+Something.cool();
+Something.greeting; // "Hello World"
+Something.count; // 1
+var Another = {
+  cool: function() {
+    // 隐式把Something混入Another
+    Something.cool.call(this);
+  }
+};
+Another.cool();
+Another.greeting; // "Hello World"
+Another.count; // 1 （count不是共享状态）
+```
+
+多态（在继承链的不同层次名称相同但是功能不同的函数）看起来似乎是从子类引用父类，但是本质上引用的其实是复制的结果。
+
+### 9.原型
