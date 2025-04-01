@@ -1,6 +1,7 @@
 ---
 title: 规范 Git Message
 date: 2024-02-01 23:57:09
+# banner: /assets/banner/GitMessage.jpg
 categories:
 - 经验分享
 tags:
@@ -20,6 +21,9 @@ tags:
 5. {% u 便于代码审查和 CI/CD 流程集成 %}
 可以通过提交信息触发特定动作，例如：自动部署、触发测试、或关联 JIRA 任务。
 {% endfolding %}
+
+{% image /assets/images/GitMessage.jpg 简洁清晰的 git log fancybox:true %}
+{% image /assets/images/GitLabCommitLog.jpg GitLab commits fancybox:true %}
 
 ## 1. 安装和配置 husky
 
