@@ -5,20 +5,21 @@ categories:
 - 经验分享
 tags:
 ---
-规范 Git Message 的原因可以总结为以下几点：
+{% folding 规范 Git Message 的原因 open:false %}
 
-1. 提升协作效率
+1. {% u 提升协作效率 %}
 清晰一致的提交信息，方便团队成员快速理解每次改动的目的。
 例如：fix(login): 修复登录按钮点击无效的问题
 一看就知道修改了什么，为什么改。
-2. 便于自动生成变更日志（Changelog）
+2. {% u 便于自动生成变更日志（Changelog） %}
 结合工具（如 standard-version、semantic-release），可以根据 commit message 自动生成版本日志。
-3. 支持语义化版本控制（Semantic Versioning）
+3. {% u 支持语义化版本控制（Semantic Versioning） %}
 根据 feat、fix 等关键词自动决定是否 bump 版本号（major / minor / patch）。
-4. 让 Git 历史更清晰可读
+4. {% u 让 Git 历史更清晰可读 %}
 规范的结构（如 Conventional Commits）让 git log 阅读体验更佳，便于回溯和审计。
-5. 便于代码审查和 CI/CD 流程集成
+5. {% u 便于代码审查和 CI/CD 流程集成 %}
 可以通过提交信息触发特定动作，例如：自动部署、触发测试、或关联 JIRA 任务。
+{% endfolding %}
 
 ## 1. 安装和配置 husky
 
