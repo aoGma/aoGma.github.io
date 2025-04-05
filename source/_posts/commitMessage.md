@@ -1,7 +1,6 @@
 ---
 title: 规范 Git Message
 date: 2024-02-01 23:57:09
-# banner: /assets/banner/GitMessage.jpg
 categories:
 - 经验分享
 tags:
