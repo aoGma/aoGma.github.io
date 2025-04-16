@@ -4,7 +4,7 @@ description: stay hungry stay foolish
 keywords: ao, blog, hexo
 author: ao
 favicon: assets/images/favicon.ico
-avatar: https://aogma.github.io/assets/images/avatar-ts.png
+avatar: https://aogma.github.io/assets/images/avatar-ts.webp
 timezone: Asia/Shanghai
 url: https://aogma.github.io
 permalink: ":year/:month/:day/:title/"
