@@ -66,4 +66,6 @@ ignore: null
 language: zh-CN
 theme: stellar
 deploy:
-  type: ""
+  type: git
+  repo: https://github.com/aoGma/aoGma.github.io
+  branch: main
