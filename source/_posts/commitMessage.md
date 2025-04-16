@@ -21,8 +21,8 @@ tags:
 可以通过提交信息触发特定动作，例如：自动部署、触发测试、或关联 JIRA 任务。
 {% endfolding %}
 
-{% image /assets/images/GitMessage.jpg 简洁清晰的 git log fancybox:true %}
-{% image /assets/images/GitLabCommitLog.jpg GitLab commits fancybox:true %}
+{% image /assets/images/GitMessage.webp 简洁清晰的 git log fancybox:true %}
+{% image /assets/images/GitLabCommitLog.webp GitLab commits fancybox:true %}
 
 ## 1. 安装和配置 husky
 
