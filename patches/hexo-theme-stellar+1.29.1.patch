@@ -1,0 +1,13 @@
+diff --git a/node_modules/hexo-theme-stellar/layout/_partial/widgets/recent.ejs b/node_modules/hexo-theme-stellar/layout/_partial/widgets/recent.ejs
+index c54094a..008609b 100644
+--- a/node_modules/hexo-theme-stellar/layout/_partial/widgets/recent.ejs
++++ b/node_modules/hexo-theme-stellar/layout/_partial/widgets/recent.ejs
+@@ -27,7 +27,7 @@ function layoutDiv() {
+     arr = site.pages.filter(p => p.notebook === page.notebook).sort('-updated')
+   } else {
+     arr = site.posts.filter( p => p.title && p.title.length > 0)
+-    arr = arr.sort("updated", -1)
++    arr = arr.sort("date", -1)
+   }
+   el += '<div class="widget-body fs14">'
+   arr = arr.filter(p => p.title?.length > 0)
