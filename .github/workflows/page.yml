@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 18.20.6
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -24,10 +24,8 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
-      - name: Install Hexo CLI globally
-        run: npm install -g hexo-cli
       - name: Generate static files
-        run: hexo generate
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
