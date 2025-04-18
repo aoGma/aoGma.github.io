@@ -1,7 +1,8 @@
 inject:
   head:
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" />
-  script:
+    - <link rel="preconnect" href="https://fonts.googleapis.com">
+    - <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    - <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
 
 style:
   font-size:
@@ -10,10 +11,10 @@ style:
     code: 85% # 14px
     codeblock: 0.8125rem # 13px
   font-family:
-    logo: '"LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
-    body: '"LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
-    code: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
-    codeblock: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+    logo: '"Noto Sans SC", Inter, system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    body: '"Noto Sans SC", Inter, system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    code: '"JetBrains Mono", Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+    codeblock: '"JetBrains Mono", Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
 
 search:
   service: local_search
@@ -24,6 +25,6 @@ search:
     codeblock: true
 
 lazyload:
-  enable: true # [hexo clean && hexo s] is required after changing this value.
+  enable: true
   js: https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js
-  transition: blur # blur, fade
+  transition: fade
