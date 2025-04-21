@@ -5,8 +5,6 @@ categories: 技术分享
 tags: React
 ---
 
-## useState
-
 `useState`是一个React Hook，它允许你向组件添加一个状态变量
 
 ```js
