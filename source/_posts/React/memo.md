@@ -11,7 +11,7 @@ memo允许你的组件在props没有改变的情况下跳过重新渲染
 const MemoizedComponent = memo(SomeComponent, arePropsEqual?)
 ```
 
-使用memo将组建包装起来，以获得该组件的一个记忆化版本。通常情况下，只要该组件的props没有改变，这个记忆化版本就不会再其父组件重新渲染时重新渲染。但React仍可能重新渲染它：记忆化是一种性能优化，而非保证
+使用memo将组建包装起来，以获得该组件的一个记忆化版本。通常情况下，只要该组件的props没有改变，这个记忆化版本就不在其父组件重新渲染时重新渲染。但React仍可能重新渲染它：记忆化是一种性能优化，而非保证
 
 ### arePropsEqual
 
