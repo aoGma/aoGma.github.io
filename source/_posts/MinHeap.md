@@ -5,6 +5,9 @@ categories:
 tags:
 ---
 
+前一篇博客最小栈，错误以为使用最小堆来实现，写完才发现题目不太对
+手写一下最小堆，来复习一下
+
 ```js
 var MinHeap = function () {
  // 最小堆
