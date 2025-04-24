@@ -8,7 +8,8 @@
 		"deploy": "hexo deploy",
 		"server": "hexo server",
 		"optimize:images": "bash ./tools/convert-and-replace.sh",
-		"postinstall": "patch-package"
+		"postinstall": "patch-package",
+		"fix-markdown-js": "node ./tools/format-js.js"
 	},
 	"hexo": {
 		"version": "6.3.0"
