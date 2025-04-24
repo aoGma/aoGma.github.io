@@ -15,7 +15,7 @@ var MinHeap = function () {
   this.minHeap = [];
 };
 MinHeap.prototype.getLeftIdx = function (idx) {
-    // 这里是idx*2+1，表示base 0起，如果是idx*2，那么表示base 1起
+  // 这里是idx*2+1，表示base 0起，如果是idx*2，那么表示base 1起
   return idx * 2 + 1;
 };
 MinHeap.prototype.getRightIdx = function (idx) {
