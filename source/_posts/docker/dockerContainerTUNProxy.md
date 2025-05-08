@@ -2,7 +2,7 @@
 title: Docker容器无法通过TUN代理
 date: 2025-05-09 00:02:20
 excerpt: 不重建容器，解决Docker容器无法走宿主的TUN代理
-categories:
+categories: 经验分享
 tags:
 ---
 
