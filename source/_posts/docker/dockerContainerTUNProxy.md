@@ -4,6 +4,7 @@ date: 2025-05-09 00:02:20
 excerpt: 不重建容器，解决Docker容器无法走宿主的TUN代理
 categories: 经验分享
 tags:
+- Docker
 ---
 
 Ubuntu Server主机配置了Clash TUN的代理模式，偶然发现Docker中的某个容器不走TUN代理
