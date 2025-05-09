@@ -4,9 +4,9 @@ description: stay hungry stay foolish
 keywords: ao, blog, hexo
 author: ao
 favicon: assets/images/favicon.ico
-avatar: https://aogma.github.io/assets/images/avatar-ts.webp
+avatar: https://aexpress.top/assets/images/avatar-ts.webp
 timezone: Asia/Shanghai
-url: https://aogma.github.io
+url: https://aexpress.top
 permalink: ":year/:month/:day/:title/"
 permalink_defaults: null
 pretty_urls:
@@ -67,3 +67,14 @@ language: zh-CN
 theme: stellar
 deploy:
   type: ""
+sitemap:
+  path: sitemap.xml
+plugins:
+- hexo-generator-robotstxt
+robotstxt:
+  useragent: "*"
+  allow: 
+  - '/*'
+  disallow: 
+  - /about
+  sitemap: "/sitemap.xml"
