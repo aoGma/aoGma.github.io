@@ -3,7 +3,7 @@ title: React memo
 date: 2025-04-21 16:06:32
 categories: 技术分享
 excerpt: React memo的作用
-tags:
+tags: React
 ---
 
 memo允许你的组件在props没有改变的情况下跳过重新渲染
