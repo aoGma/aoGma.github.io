@@ -14,7 +14,7 @@ Ubuntu Server主机配置了Clash TUN的代理模式，偶然发现Docker中的�
 
 执行del操作的时候，先看一下当前的路由表内容，如果有问题还能恢复，以防恢复不了
 
-{% image /assets/images/DockeIPRoutesDefault.png 默认的路由表 fancybox:true %}
+{% image /assets/images/DockeIPRoutesDefault.webp 默认的路由表 fancybox:true %}
 
 ```bash
 docker exec --privileged -it stash /bin/sh
