@@ -24,7 +24,7 @@ index f61f944..3ee55f3 100644
      color: var(--text)
    .search-button 
 diff --git a/node_modules/hexo-theme-stellar/source/css/_custom.styl b/node_modules/hexo-theme-stellar/source/css/_custom.styl
-index f429a5c..ac5207b 100644
+index f429a5c..bee224b 100644
 --- a/node_modules/hexo-theme-stellar/source/css/_custom.styl
 +++ b/node_modules/hexo-theme-stellar/source/css/_custom.styl
 @@ -106,3 +106,6 @@ $boxshadow-card-float = 0 12px 16px -4px rgba(0, 0, 0, 0.2)
@@ -34,4 +34,3 @@ index f429a5c..ac5207b 100644
 +
 +body
 +  font-weight: 500
-\ No newline at end of file
