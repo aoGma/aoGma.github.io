@@ -11,6 +11,18 @@ index c54094a..1ff6ffd 100644
    }
    el += '<div class="widget-body fs14">'
    arr = arr.filter(p => p.title?.length > 0)
+diff --git a/node_modules/hexo-theme-stellar/source/css/_components/sidebar/search.styl b/node_modules/hexo-theme-stellar/source/css/_components/sidebar/search.styl
+index f61f944..3ee55f3 100644
+--- a/node_modules/hexo-theme-stellar/source/css/_components/sidebar/search.styl
++++ b/node_modules/hexo-theme-stellar/source/css/_components/sidebar/search.styl
+@@ -21,6 +21,7 @@
+     box-sizing: border-box
+     font-family: $ff-body
+     font-size: $fs-14
++    font-weight: 500
+     padding: 12px 0
+     color: var(--text)
+   .search-button 
 diff --git a/node_modules/hexo-theme-stellar/source/css/_custom.styl b/node_modules/hexo-theme-stellar/source/css/_custom.styl
 index f429a5c..bee224b 100644
 --- a/node_modules/hexo-theme-stellar/source/css/_custom.styl
