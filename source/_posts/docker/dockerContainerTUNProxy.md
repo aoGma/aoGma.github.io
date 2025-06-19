@@ -54,6 +54,18 @@ export https_proxy=http://host.docker.internal:7890
 > ChatGPT说host.docker.internal是宿主机地址（macOS和Windows默认支持Linux可通过添加--add-host或使用容器IP
 
 我尝试了一下Ubuntu Server中直接使用这个地址是可以代理到宿主的7890端口的
+在树莓派的OS: Debian GNU/Linux 12 (bookworm) aarch64中host.docker.internal是不生效的，而且写入/etc/profile之后重启容器也没有走代理
+只能通过写入环境变量才能生效
+
+```bash
+    environment:
+      - STASH_STASH=/data/
+      - STASH_GENERATED=/generated/
+      - STASH_METADATA=/metadata/
+      - STASH_CACHE=/cache/
+      - http_proxy=socks5://192.168.110.66:7890
+      - https_proxy=socks5://192.168.110.66:7890
+```
 
 export只能当前session使用，退出终端之后就没了
 
