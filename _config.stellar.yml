@@ -2,7 +2,9 @@ inject:
   head:
     - <link rel="preconnect" href="https://fonts.googleapis.com">
     - <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    - <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+    - <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    # - <link href="https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/lxgwwenkai-regular/result.css" rel="stylesheet">
+    - <link href="https://fonts.cdnfonts.com/css/opposans" rel="stylesheet">
 
 style:
   font-size:
@@ -11,10 +13,11 @@ style:
     code: 85% # 14px
     codeblock: 0.8125rem # 13px
   font-family:
-    logo: '"Noto Sans SC", Inter, system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
-    body: '"Noto Sans SC", Inter, system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
-    code: '"JetBrains Mono", Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
-    codeblock: '"JetBrains Mono", Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+    logo: '"Ubuntu Mono", monospace'
+    # body: 'OPPOSans, "LXGW WenKai", "Ubuntu Mono", monospace'
+    body: 'OPPOSans, "Ubuntu Mono", monospace'
+    code: '"Ubuntu Mono", monospace'
+    codeblock: '"Ubuntu Mono", monospace'
 
 search:
   service: local_search
